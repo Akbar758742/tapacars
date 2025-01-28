@@ -6,7 +6,7 @@ const SearchBox = ({searchCars,onSetsearchCars,onsetPremiumCars,premiumCars}) =>
 
     return (
         <div className="flex items-center m-2">
-           <form action="">
+           <form action="" className="flex items-center flex-wrap">
            <input type="text" placeholder="Search cars..." className="mr-4 border-2 rounded-sm" value={searchCars} 
            onChange={(e) => onSetsearchCars(e.target.value)}
            
