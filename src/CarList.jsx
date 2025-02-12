@@ -4,7 +4,7 @@ import propTypes from 'prop-types'
 
 
 
-const CarList = ({ cars, searchCars,SetsearchCars}) => {
+const CarList = ({ cars, searchCars,SetsearchCars,premiumCars}) => {
 
     const cardetail = [];
     cars.forEach((cars) => {
@@ -12,8 +12,10 @@ const CarList = ({ cars, searchCars,SetsearchCars}) => {
             return;
         }
 
-        
-        cardetail.push(<CarDetails car={cars} key={cars.id} />);
+        if(!premiumCars || (cars.isPremium === premiumCars)){
+            cardetail.push(<CarDetails car={cars} key={cars.id} />);
+        }
+       
     });
 
     return (

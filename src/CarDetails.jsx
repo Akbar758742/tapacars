@@ -4,7 +4,7 @@ import propTypes from 'prop-types'
 const CarDetails = ({car}) => {
     const {title, brand, year, price, isPremium} = car;
     return (
-        <div className=" m-2 border-2 rounded-sm p-2" >
+        <div className=" m-2 border-2 rounded-xs p-2" >
             <h2 className='font-semibold text-2xl'>{title}</h2>
             <p > <span className='font-semibold'>Brand:</span> {brand}</p>
             <p > <span className='font-semibold'>Year:</span> {year}</p>

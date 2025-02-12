@@ -27,17 +27,15 @@ const TapaCars = () => {
       { "id": 20, "title": "Luxury Sedan", "brand": "Audi", "year": 2023, "price": 88000, "isPremium": true }
     ]; 
   const [searchCars, setsearchCars] = useState(""); 
-  const [premiumCars, setPremiumCars] = useState(cars);
+  const [premiumCars, setPremiumCars] = useState(false);
   
   return (
     <div className=" p-3 mx-auto">
         <Header />
-        <SearchBox searchCars={searchCars} onSetsearchCars={setsearchCars}
-        
+        <SearchBox searchCars={searchCars} 
+        onSetsearchCars={setsearchCars}
         premiumCars={premiumCars}
         onsetPremiumCars={setPremiumCars}
-        
-        
         />
         <CarList searchCars={searchCars} cars={cars} premiumCars={premiumCars}  onSetsearchCars={setsearchCars} />
     </div>
